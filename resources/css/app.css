@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import flowbite setelah direktif tailwind */
+@import 'flowbite';
+
+/* Optional: tambahan custom layer kamu */
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+
+  }
+
+
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+html,body{
+    scroll-behavior: smooth;
+}
