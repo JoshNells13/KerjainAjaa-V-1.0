@@ -10,25 +10,49 @@
 
 <body class=" dark:bg-gray-900">
     <!-- Header -->
-    <header class="sticky top-0 ">
-        <nav class="bg-gradient-to-b from-gray-900 to-gray-800 border-gray-700 z-50">
+    <header class="sticky top-0 z-50">
+        <nav class="bg-gradient-to-b from-gray-900 to-gray-800 border-gray-700">
             <div class="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between">
+                <!-- Logo -->
                 <a href="{{ url('/') }}"
                     class="text-2xl font-extrabold italic bg-gradient-to-r from-sky-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                     KerjainAjaa
                 </a>
-                <div class="flex items-center space-x-4">
-                    <a href="#home" class="text-white hover:text-blue-400">Home</a>
-                    <a href="#features" class="text-white hover:text-blue-400">Features</a>
-                    <a href="#why" class="text-white hover:text-blue-400">Why Us</a>
-                    <a href="#contact" class="text-white hover:text-blue-400">Contact</a>
 
+                <!-- Hamburger Button (Mobile) -->
+                <button id="menu-toggle" class="text-white focus:outline-none md:hidden hover:text-blue-400 transition">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#home" class="text-white hover:text-blue-400 transition">Home</a>
+                    <a href="#features" class="text-white hover:text-blue-400 transition">Features</a>
+                    <a href="#why" class="text-white hover:text-blue-400 transition">Why Us</a>
+                    <a href="#contact" class="text-white hover:text-blue-400 transition">Contact</a>
                     <a href="{{ route('login') }}"
-                        class="px-4 py-2 rounded-lg bg-gradient-to-r font-medium from-pink-500 to-purple-500 text-white hover:opacity-90">Login</a>
+                        class="px-4 py-2 rounded-lg bg-gradient-to-r font-medium from-pink-500 to-purple-500 text-white hover:opacity-90 transition">Login</a>
                     <a href="{{ route('register') }}"
-                        class="px-4 py-2 rounded-lg bg-gradient-to-r font-medium from-purple-500 to-blue-500 text-white hover:opacity-90">Sign
+                        class="px-4 py-2 rounded-lg bg-gradient-to-r font-medium from-purple-500 to-blue-500 text-white hover:opacity-90 transition">Sign
                         Up</a>
                 </div>
+            </div>
+
+            <!-- Menu Mobile -->
+            <div id="mobile-menu"
+                class="hidden flex-col space-y-3 px-6 pb-4 bg-gradient-to-b from-gray-900 to-gray-800 md:hidden">
+                <a href="#home" class="text-white hover:text-blue-400 transition">Home</a>
+                <a href="#features" class="text-white hover:text-blue-400 transition">Features</a>
+                <a href="#why" class="text-white hover:text-blue-400 transition">Why Us</a>
+                <a href="#contact" class="text-white hover:text-blue-400 transition">Contact</a>
+                <a href="{{ route('login') }}"
+                    class="block text-center px-4 py-2 rounded-lg bg-gradient-to-r font-medium from-pink-500 to-purple-500 text-white hover:opacity-90 transition">Login</a>
+                <a href="{{ route('register') }}"
+                    class="block text-center px-4 py-2 rounded-lg bg-gradient-to-r font-medium from-purple-500 to-blue-500 text-white hover:opacity-90 transition">Sign
+                    Up</a>
             </div>
         </nav>
     </header>
@@ -145,7 +169,8 @@
             </h2>
             <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
                 <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">KerjainAjaa is a simple yet powerful web-based task
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">KerjainAjaa is a simple yet powerful web-based
+                        task
                         management platform that helps you stay organized, productive, and focused on what truly
                         matters. Whether you’re managing school projects or personal goals, KerjainAjaa keeps your
                         workflow smooth and efficient.</p>
@@ -222,7 +247,8 @@
     <!-- CTA Section -->
     <section class=" py-16 text-center text-white">
         <h2 class="text-4xl text-gray-900 font-bold mb-4">Ready to Boost Your Productivity?</h2>
-        <p class="mb-8 text-lg text-gray-900 ">Start managing your time like a pro — join thousands of users who’ve leveled up with
+        <p class="mb-8 text-lg text-gray-900 ">Start managing your time like a pro — join thousands of users who’ve
+            leveled up with
             KerjainAjaa!</p>
         <a href="{{ route('register') }}"
             class="inline-block px-8 py-3 bg-white text-blue-700 font-semibold rounded-lg hover:bg-gray-100 transition">
@@ -258,6 +284,17 @@
                 <a href="{{ url('/') }}" class="hover:underline">KerjainAjaa™</a>. All Rights Reserved.</span>
         </div>
     </footer>
+
+
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("mobile-menu");
+
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            menu.classList.toggle("flex");
+        });
+    </script>
 </body>
 
 </html>
