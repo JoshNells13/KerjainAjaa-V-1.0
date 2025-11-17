@@ -3,7 +3,7 @@
 @section('title', 'Task')
 
 @section('content')
-    <h1 class="text-white text-3xl font-bold mb-4">
+    <h1 class="text-black text-3xl font-bold mb-4">
         Manage Your Task</h1>
     <p class="text-white dark:text-gray-300 mb-6">Manage tasks, view progress, and stay productive together
         <strong>KerjainAjaa</strong>!
