@@ -14,7 +14,7 @@
     </div>
 
     <!-- Login Form Card -->
-    <div class="bg-white rounded-2xl shadow-xl border border-purple-100 ">
+    <div class="bg-white rounded-2xl shadow-xl border border-purple-100 p-8">
         <form class="space-y-6" method="POST" action="{{ route('register') }}">
             @csrf
 
@@ -133,7 +133,7 @@
             <p class="text-center text-sm text-gray-600 mt-6">
                 have an account?
                 <a href="{{ route('login') }}" class="font-semibold text-purple-600 hover:text-purple-700 transition-colors">
-                    Sign In
+                    Sign in
                 </a>
             </p>
         </form>

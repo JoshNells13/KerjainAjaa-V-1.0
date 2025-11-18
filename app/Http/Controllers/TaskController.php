@@ -13,7 +13,7 @@ class TaskController extends Controller
     public function index()
     {
 
-        $Task = task::where('user_id',Auth::user()->id)->get();
+        $Task = task::where('user_id',Auth::user()->id)->where('status','in_progress')->get();
 
         $Category = categorie::where('user_id', Auth::user()->id)->get();
 
