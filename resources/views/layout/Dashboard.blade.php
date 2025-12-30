@@ -158,9 +158,9 @@
                 <span class="font-medium">Completed</span>
             </a>
 
-            <div class="px-3 mt-6 mb-2">
+            {{-- <div class="px-3 mt-6 mb-2">
                 <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Settings</span>
-            </div>
+            </div> --}}
 
             <a href="#"
                 class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 hover:bg-purple-50 transition-all duration-200 group">

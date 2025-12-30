@@ -85,7 +85,7 @@
                 <div class="space-y-8 animate-slide-up">
                     <div class="inline-block">
                         <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">
-                            ✨ Productivity Made Simple
+                             Productivity Made Simple
                         </span>
                     </div>
 
@@ -324,11 +324,6 @@
                 <!-- Right: Benefits List -->
                 <div class="space-y-8">
                     <div class="flex gap-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                                <span class="text-2xl">🚀</span>
-                            </div>
-                        </div>
                         <div>
                             <h3 class="text-xl font-bold text-gray-900 mb-2">Always Improving</h3>
                             <p class="text-gray-600">Regular updates with new features based on user feedback. We're building this together.</p>
